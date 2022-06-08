@@ -1,7 +1,10 @@
+from django import views
 from django.urls import path
-from products import views
+from products.views import ProductListView
+
 
 
 urlpatterns = [
-    path("", views.home , name="home"),
+    path('products/', ProductListView.as_view()),
+    
 ]

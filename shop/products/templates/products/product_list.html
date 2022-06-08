@@ -1,0 +1,44 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Processor</th>
+    
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"></td>
+            <td>{% block content %}
+
+
+                {% for product in object_list %}
+                <li>Name:{{ product.name }}</li>
+                <li>Image{{ product.img }}</l</li>i>
+                <li>Manufacture:{{ product.manufacture }}</li>
+                <li>No. of Cores:{{ product.cores }}Cores</li>
+                <li>Core Clock Speed{{ product.core_clock }}GHz</li>
+                <li>Boost Clock Speed{{ product.boost_clock }}GHz</li>
+                <li>TDP {{ product.tdp }}W</li>
+                <li>Integrated_graphics{{ product.integrated_graphics }}</li>
+                <li>Price:{{ product.price }}$</li>
+                <li>Performance:{{ product.performance }}</li>
+                <li>LLithograph:{{ product.lithograph }}</li>
+                <li>Micro architecture:{{ product.micro_architecture }}</li>
+                <li>Core Family:{{ product.core_family }}</li>
+                <li>Socket:{{ product.socket_name }}</li>
+                <li>Maximum Supported memory:{{ product.maximum_supported_memory }}GB</li>
+                <li>CPU cooler{{ product.cpu_cooler }}</li>
+                <hr>
+                {% endfor %}</td>
+            <td></td>
+        </tr>
+        
+    </tbody>
+</table>
+
+
+
+        
+
+ 
+  {% endblock content %}
